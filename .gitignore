@@ -41,3 +41,4 @@ yarn-error.log*
 # Preserve large source videos locally; publish web-optimized copies instead.
 public/projects/main-project/Cameron_Engineering_Video.mp4
 public/projects/valve-actuator/valve-actuator-video.MOV
+source-media/
