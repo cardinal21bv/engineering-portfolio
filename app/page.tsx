@@ -48,8 +48,8 @@ export default function Home() {
           <div className="project-info">
             <div className="project-number">PROJECT 01 / CONTROLS + MECHATRONICS</div>
             <h3>Industrial Valve<br />Automation System</h3>
-            <p className="summary">An end-to-end quarter-turn valve system integrating Siemens PLC automation, custom HMI/SCADA software, embedded motion control, sensing, safety logic, and a custom mechanical drivetrain—built for $1,500 out of pocket.</p>
-            <div className="project-metrics"><div><b>$1.5K</b><span>Prototype cost</span></div><div><b>$3K</b><span>Professional equivalent</span></div><div><b>6</b><span>Control layers</span></div></div>
+            <p className="summary">An end-to-end quarter-turn valve system integrating Siemens PLC automation, custom HMI/SCADA software, embedded motion control, sensing, safety logic, and a custom mechanical drivetrain. I built the complete prototype for $1,500 out of pocket.</p>
+            <div className="project-metrics"><div><b>$1.5K</b><span>Prototype cost</span></div><div><b>$2.5K</b><span>Estimated professional build</span></div><div><b>6</b><span>Control layers</span></div></div>
             <ul>
               <li>Programmed PLC sequencing, command arbitration, interlocks, and fault handling in TIA Portal</li><li>Built custom HMI/SCADA software for local, remote, jog, and automatic control</li><li>Integrated encoder feedback, dual limit switches, and current-based fault sensing</li><li>Designed and commissioned the mechanical, electrical, embedded, and software layers</li>
             </ul>
