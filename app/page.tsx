@@ -35,7 +35,7 @@ export default function Home() {
       <section className="reel" aria-labelledby="reel-title">
         <div className="section-heading"><span>00</span><h2 id="reel-title">Engineering Project Highlights</h2><p>3:04 project reel</p></div>
         <div className="reel-intro"><p>A quick look at the physical systems, control software, CAD, integration, and testing behind my work.</p><span>Hardware&nbsp;&nbsp;•&nbsp;&nbsp;Controls&nbsp;&nbsp;•&nbsp;&nbsp;CAD&nbsp;&nbsp;•&nbsp;&nbsp;Testing</span></div>
-        <video className="highlight-video" controls preload="metadata" poster="/projects/main-project/highlight-poster.jpg" playsInline><source src="/projects/main-project/highlight-web.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
+        <video className="highlight-video" controls preload="metadata" poster="/projects/main-project/front_image.PNG" playsInline><source src="/projects/main-project/highlight-web.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
       </section>
 
       <section className="projects" id="projects" aria-labelledby="projects-title">
