@@ -21,7 +21,7 @@ export default function Home() {
         <div className="hero-lower">
           <h2>Mechanical Engineer <span>/</span><br /> Controls &amp; Building Automation</h2>
           <div className="hero-copy">
-            <p>I design, build, program, integrate, and test electromechanical and building control systems, turning mechanical hardware into reliable automated solutions.</p>
+            <p>I build and commission automated systems that connect control software, electrical hardware, sensors, and electromechanical equipment.</p>
             <div className="actions">
               <a className="button primary" href="/Cameron-McConnell-Resume.pdf">Resume <Arrow /></a>
               <a className="button" href="https://www.linkedin.com/in/cameronmcc" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
