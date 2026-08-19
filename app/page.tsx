@@ -1,7 +1,7 @@
 const skills = {
-  Controls: ["Siemens S7-1200", "TIA Portal", "PLC Controls", "Instrumentation"],
+  Controls: ["Siemens S7-1200 PLC", "TIA Portal", "PLC Controls", "Instrumentation", "Arduino"],
   Building: ["HVAC", "Building Automation", "Energy Monitoring", "Control Sequences"],
-  Engineering: ["SolidWorks", "CATIA", "MATLAB / Simulink", "Python"],
+  Engineering: ["SolidWorks", "Electrical Design / Schematics", "MATLAB / Simulink", "Python"],
   Practice: ["System Integration", "Troubleshooting", "Technical Documentation"],
 };
 
@@ -33,9 +33,9 @@ export default function Home() {
       </header>
 
       <section className="reel" aria-labelledby="reel-title">
-        <div className="section-heading"><span>00</span><h2 id="reel-title">Engineering Project Highlights</h2><p>45–60 sec reel</p></div>
+        <div className="section-heading"><span>00</span><h2 id="reel-title">Engineering Project Highlights</h2><p>3:04 project reel</p></div>
         <div className="reel-intro"><p>A quick look at the physical systems, control software, CAD, integration, and testing behind my work.</p><span>Hardware&nbsp;&nbsp;•&nbsp;&nbsp;Controls&nbsp;&nbsp;•&nbsp;&nbsp;CAD&nbsp;&nbsp;•&nbsp;&nbsp;Testing</span></div>
-        <video className="highlight-video" controls preload="metadata" playsInline><source src="/projects/main-project/highlight-web.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
+        <video className="highlight-video" controls preload="metadata" poster="/projects/main-project/highlight-poster.jpg" playsInline><source src="/projects/main-project/highlight-web.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
       </section>
 
       <section className="projects" id="projects" aria-labelledby="projects-title">
@@ -48,12 +48,12 @@ export default function Home() {
           <div className="project-info">
             <div className="project-number">PROJECT 01 / CONTROLS + MECHATRONICS</div>
             <h3>Industrial Valve<br />Automation System</h3>
-            <p className="summary">An end-to-end quarter-turn valve system integrating Siemens PLC automation, custom HMI/SCADA software, embedded motion control, sensing, safety logic, and a custom mechanical drivetrain.</p>
-            <div className="project-metrics"><div><b>6</b><span>Control layers</span></div><div><b>90°</b><span>Closed-loop travel</span></div><div><b>1</b><span>Integrated system</span></div></div>
+            <p className="summary">An end-to-end quarter-turn valve system integrating Siemens PLC automation, custom HMI/SCADA software, embedded motion control, sensing, safety logic, and a custom mechanical drivetrain—built for $1,500 out of pocket.</p>
+            <div className="project-metrics"><div><b>$1.5K</b><span>Prototype cost</span></div><div><b>$3K</b><span>Professional equivalent</span></div><div><b>6</b><span>Control layers</span></div></div>
             <ul>
               <li>Programmed PLC sequencing, command arbitration, interlocks, and fault handling in TIA Portal</li><li>Built custom HMI/SCADA software for local, remote, jog, and automatic control</li><li>Integrated encoder feedback, dual limit switches, and current-based fault sensing</li><li>Designed and commissioned the mechanical, electrical, embedded, and software layers</li>
             </ul>
-            <div className="tech-line"><b>TOOLS</b><span>S7-1200</span><span>TIA Portal</span><span>SCADA / HMI</span><span>Arduino</span><span>CAD</span></div>
+            <div className="tech-line"><b>TOOLS</b><span>S7-1200 PLC</span><span>TIA Portal</span><span>SCADA / HMI</span><span>Arduino</span><span>SolidWorks</span></div>
           </div>
           <details className="case-study"><summary>Explore the 4-page case study <span>Open +</span></summary><div className="case-grid">{[1,2,3,4].map((page) => <a href={`/projects/valve-actuator/${page}.png`} target="_blank" rel="noreferrer" key={page}><img src={`/projects/valve-actuator/${page}.png`} alt={`Industrial valve automation case study page ${page}`} loading="lazy" /><span>Page {page} <Arrow /></span></a>)}</div></details>
         </article>
