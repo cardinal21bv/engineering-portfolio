@@ -2,7 +2,7 @@
 
 A responsive, one-page engineering portfolio focused on controls, industrial automation, electromechanical systems, HVAC controls, and building automation.
 
-**Live portfolio:** [cameron-mcconnell-engineering.cm-mcconne.chatgpt.site](https://cameron-mcconnell-engineering.cm-mcconne.chatgpt.site/)
+**Live portfolio:** [cardinal21bv.github.io/engineering-portfolio](https://cardinal21bv.github.io/engineering-portfolio/)
 
 ## Featured work
 
@@ -46,5 +46,5 @@ npm run build
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/cameronmcc)
-- [Engineering portfolio](https://cameron-mcconnell-engineering.cm-mcconne.chatgpt.site/)
+- [Engineering portfolio](https://cardinal21bv.github.io/engineering-portfolio/)
 - [Email](mailto:cm.mcconne@gmail.com)
