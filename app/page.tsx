@@ -24,7 +24,7 @@ export default function Home() {
             <p>I design, build, program, integrate, and test electromechanical and building-control systems—connecting mechanical hardware to reliable control logic.</p>
             <div className="actions">
               <a className="button primary" href="/Cameron-McConnell-Resume.pdf">Resume <Arrow /></a>
-              <a className="button" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
+              <a className="button" href="https://www.linkedin.com/in/cameronmcc" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
               <a className="button" href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
               <a className="text-link" href="#contact">Contact ↓</a>
             </div>
@@ -80,7 +80,7 @@ export default function Home() {
 
       <section className="contact" id="contact" aria-labelledby="contact-title">
         <div className="contact-copy"><span>LET’S BUILD SOMETHING THAT WORKS.</span><h2 id="contact-title">Looking for an engineer who can connect the mechanical system to the controls?</h2></div>
-        <div className="contact-actions"><a className="button light" href="mailto:cameron@example.com">cameron@example.com <Arrow /></a><div><a href="https://www.linkedin.com">LinkedIn ↗</a><a href="https://github.com">GitHub ↗</a></div></div>
+        <div className="contact-actions"><a className="button light" href="mailto:cm.mcconne@gmail.com">cm.mcconne@gmail.com <Arrow /></a><div><a href="https://www.linkedin.com/in/cameronmcc" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
       </section>
       <footer><span>CAMERON McCONNELL</span><span>MECHANICAL / CONTROLS / AUTOMATION</span><span>© 2026</span></footer>
     </main>
