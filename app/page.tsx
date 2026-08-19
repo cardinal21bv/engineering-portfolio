@@ -7,20 +7,6 @@ const skills = {
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
-function MediaPlaceholder({ type }: { type: "actuator" | "bas" }) {
-  return (
-    <div className={`project-media ${type}`} aria-label={`${type === "actuator" ? "Valve actuator" : "Building automation"} project media placeholder`}>
-      <div className="media-grid" />
-      {type === "actuator" ? (
-        <div className="actuator-diagram" aria-hidden="true"><div className="motor">M</div><div className="shaft" /><div className="gear">24:1</div><div className="valve">90°</div></div>
-      ) : (
-        <div className="bas-diagram" aria-hidden="true"><div>AHU-1</div><i /><div>ZONE 01</div><i /><div>BAS</div></div>
-      )}
-      <span className="media-label">{type === "actuator" ? "ACTUATOR SYSTEM / MEDIA" : "CONTROL ARCHITECTURE / MEDIA"}</span>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <main>
@@ -48,39 +34,42 @@ export default function Home() {
 
       <section className="reel" aria-labelledby="reel-title">
         <div className="section-heading"><span>00</span><h2 id="reel-title">Engineering Project Highlights</h2><p>45–60 sec reel</p></div>
-        <div className="video-placeholder">
-          <div className="video-center"><span className="play">▶</span><strong>HIGHLIGHT REEL</strong><small>Hardware • Controls • CAD • Testing</small></div>
-          <div className="frame-mark tl" /><div className="frame-mark tr" /><div className="frame-mark bl" /><div className="frame-mark br" />
-        </div>
+        <div className="reel-intro"><p>A quick look at the physical systems, control software, CAD, integration, and testing behind my work.</p><span>Hardware&nbsp;&nbsp;•&nbsp;&nbsp;Controls&nbsp;&nbsp;•&nbsp;&nbsp;CAD&nbsp;&nbsp;•&nbsp;&nbsp;Testing</span></div>
+        <video className="highlight-video" controls preload="metadata" playsInline><source src="/projects/main-project/highlight-web.mp4" type="video/mp4" />Your browser does not support embedded video.</video>
       </section>
 
       <section className="projects" id="projects" aria-labelledby="projects-title">
         <div className="section-heading"><span>01</span><h2 id="projects-title">Featured Projects</h2><p>Selected engineering work</p></div>
         <article className="project featured">
-          <MediaPlaceholder type="actuator" />
+          <div className="project-visual">
+            <video className="project-video" controls preload="metadata" playsInline><source src="/projects/valve-actuator/valve-actuator-web.mp4" type="video/mp4" />Your browser does not support this video format.</video>
+            <span className="visual-caption">SYSTEM DEMO / PLC + HMI + PHYSICAL ACTUATOR</span>
+          </div>
           <div className="project-info">
             <div className="project-number">PROJECT 01 / CONTROLS + MECHATRONICS</div>
-            <h3>PLC-Controlled<br />Quarter-Turn Valve Actuator</h3>
-            <p className="summary">A purpose-built electromechanical actuator with closed-loop position control, protection logic, and a Siemens PLC interface—designed from mechanical drivetrain through system commissioning.</p>
+            <h3>Industrial Valve<br />Automation System</h3>
+            <p className="summary">An end-to-end quarter-turn valve system integrating Siemens PLC automation, custom HMI/SCADA software, embedded motion control, sensing, safety logic, and a custom mechanical drivetrain.</p>
+            <div className="project-metrics"><div><b>6</b><span>Control layers</span></div><div><b>90°</b><span>Closed-loop travel</span></div><div><b>1</b><span>Integrated system</span></div></div>
             <ul>
-              <li>Programmed automated open/close sequences and interlocks in TIA Portal</li><li>Integrated encoder feedback, limit switches, and motor-current sensing</li><li>Designed the geared drivetrain, enclosure, and valve coupling in CAD</li><li>Built and tested a complete panel-to-hardware control system</li>
+              <li>Programmed PLC sequencing, command arbitration, interlocks, and fault handling in TIA Portal</li><li>Built custom HMI/SCADA software for local, remote, jog, and automatic control</li><li>Integrated encoder feedback, dual limit switches, and current-based fault sensing</li><li>Designed and commissioned the mechanical, electrical, embedded, and software layers</li>
             </ul>
-            <div className="tech-line"><b>TOOLS</b><span>S7-1200</span><span>TIA Portal</span><span>CAD</span><span>DC Motor Control</span></div>
-            <a className="project-link" href="#contact">View Project <Arrow /></a>
+            <div className="tech-line"><b>TOOLS</b><span>S7-1200</span><span>TIA Portal</span><span>SCADA / HMI</span><span>Arduino</span><span>CAD</span></div>
           </div>
+          <details className="case-study"><summary>Explore the 4-page case study <span>Open +</span></summary><div className="case-grid">{[1,2,3,4].map((page) => <a href={`/projects/valve-actuator/${page}.png`} target="_blank" rel="noreferrer" key={page}><img src={`/projects/valve-actuator/${page}.png`} alt={`Industrial valve automation case study page ${page}`} loading="lazy" /><span>Page {page} <Arrow /></span></a>)}</div></details>
         </article>
         <article className="project secondary">
           <div className="project-info">
             <div className="project-number">PROJECT 02 / HVAC + BUILDING AUTOMATION</div>
             <h3>Climate-Responsive<br />Office BAS Design</h3>
-            <p className="summary">A whole-building controls concept connecting HVAC load calculations and equipment selection with sensors, control sequences, energy monitoring, alarms, and operator visibility.</p>
+            <p className="summary">A climate-responsive 260 ft² Seattle office design connecting envelope decisions and Manual J load calculations with equipment selection, controls planning, and energy-performance analysis.</p>
+            <div className="project-metrics"><div><b>7.5K</b><span>Heating BTU/h</span></div><div><b>6.5K</b><span>Cooling BTU/h</span></div><div><b>20–35%</b><span>Energy reduction</span></div></div>
             <ul>
-              <li>Calculated heating and cooling loads to guide equipment selection</li><li>Developed occupancy, CO₂, and temperature-based control sequences</li><li>Defined monitoring points, alarms, and energy-performance metrics</li><li>Mapped field devices into a coherent BAS architecture</li>
+              <li>Completed Manual J heating and cooling load calculations</li><li>Specified a 9,000 BTU/h ductless heat pump and high-performance envelope</li><li>Developed occupancy, CO₂, lighting, thermostat, and alarm control concepts</li><li>Evaluated operating savings, installed cost, and projected 8–11 year payback</li>
             </ul>
-            <div className="tech-line"><b>TOOLS</b><span>HVAC</span><span>BAS</span><span>CO₂ Sensing</span><span>Alarms</span></div>
-            <a className="project-link" href="#contact">View Project <Arrow /></a>
+            <div className="tech-line"><b>TOOLS</b><span>HVAC</span><span>Manual J</span><span>BAS</span><span>Energy Analysis</span></div>
           </div>
-          <MediaPlaceholder type="bas" />
+          <a className="project-image" href="/projects/office-bas/office-bas-1.jpg" target="_blank" rel="noreferrer"><img src="/projects/office-bas/office-bas-1.jpg" alt="Climate-responsive office design executive summary" loading="lazy" /><span>EXECUTIVE SUMMARY / OPEN FULL SIZE <Arrow /></span></a>
+          <details className="case-study"><summary>Explore calculations &amp; supporting work <span>Open +</span></summary><div className="case-grid office-grid">{[1,2,3,4].map((page) => <a href={`/projects/office-bas/office-bas-${page}.jpg`} target="_blank" rel="noreferrer" key={page}><img src={`/projects/office-bas/office-bas-${page}.jpg`} alt={`Climate-responsive office design supporting page ${page}`} loading="lazy" /><span>{page < 3 ? `Case study page ${page}` : `Calculation sheet ${page - 2}`} <Arrow /></span></a>)}</div></details>
         </article>
       </section>
 
